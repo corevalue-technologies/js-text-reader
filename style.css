@@ -1,0 +1,171 @@
+html, body {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+body {
+    overflow: hidden;
+	font-family: 'Inconsolata', monospace;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.main-container {
+    background:peachpuff;
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+}
+
+.container {
+    height: 100%;
+    padding: 50px 0px;
+}
+
+.content {
+    border-radius: 8px;
+    background: white;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.3);
+    padding: 40px 20px;
+    margin: auto;
+}
+
+.heading h1 {
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    color: rosybrown;
+}
+
+.info p {
+    text-align: center;
+    color: indianred;
+}
+
+label {
+    font-weight: 600;
+}
+
+select {
+    margin-bottom: 10px;
+}
+
+.body {
+    max-height: calc(100vh - 330px);
+    overflow: auto;
+    margin-top: 20px;
+}
+
+
+#speak {
+    margin-top: 30px;
+    background: brown;
+    color: white;
+    width: 40%;
+}
+
+#stop {
+    margin-top: 30px;
+    background: salmon;;
+    color: white;
+    width: 40%;
+}
+
+#speak:focus {
+    outline: 0;
+    box-shadow: none;
+}
+
+#waveform {
+    position: relative;
+    margin-top: 50px;
+    left: 46%;
+}
+
+#waveform span {
+    display: block;
+    bottom: 0px;
+    width: 9px;
+    height: 5px;
+    background: brown;
+    position: absolute;
+}
+
+#waveform span:nth-child(2) {
+    left: 11px;
+}
+
+#waveform span:nth-child(3) {
+    left: 22px;
+}
+
+#waveform span:nth-child(4) {
+    left: 33px;
+}
+
+#waveform span:nth-child(5) {
+    left: 44px;
+}
+
+@keyframes audio-wave {
+    0% {
+        height:5px;
+        transform:translateY(0px);
+        background:brown;
+    }
+    25% {
+        height:40px;
+        transform:translateY(20px);
+        background:peachpuff;
+    }
+    50% {
+        height:5px;
+        transform:
+        translateY(0px);
+        background:brown;
+    }
+    100% {
+        height:5px;
+        transform:translateY(0px);
+        background:brown;
+    }
+}
+
+.radio-voices input[type="radio"] {
+    opacity: 0;
+    position: fixed;
+    width: 0;
+}
+
+.radio-voices label {
+    display: inline-block;
+    background-color: #ddd;
+    padding: 2px 6px;
+    font-family: sans-serif, Arial;
+    font-size: 10px;
+    border: 2px solid lightgrey;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.radio-voices input[type="radio"]:checked + label {
+    background-color: peachpuff;
+    border-color: brown;
+}
+
+.radio-voices input[type="radio"]:checked + label:hover {
+    background-color: peachpuff;
+    color: black;
+}
+
+.radio-voices input[type="radio"]:focus + label {
+    border: 2px solid brown;
+}
+
+.radio-voices label:hover {
+    background-color: brown;
+    color: white;
+    border: 2px solid brown;
+}

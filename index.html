@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Inconsolata&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <title>JS Text Reader</title>
+</head>
+<body>
+  <div class="main-container">
+    <div class="container">
+      <div class="col-sm-0 col-md-2 col-lg-2"></div>
+      <div class="col-sm-12 col-md-8 col-lg-8 content">
+        <div class="heading">
+          <h1>JS Text Reader</h1>
+        </div>
+        <div class="info">
+          <p>This is a simple JS Text Reader app. It uses browser SpeechSynthesis api.</p>
+        </div>
+        <div class="body">
+          <label>Voices</label>  
+          <div class="radio-voices">
+              <input type="radio" id="voice" name="voice" value="name" checked>
+              <label for="voice">name</label>
+          </div>
+          <p>&nbsp;</p>
+          <label>Text: </label>
+          <textarea id="text" placeholder="I want the JS Text Reader to read.." class="form-control"></textarea>
+          <div class="text-center">
+            <button class="btn" id="speak">
+              <i class="fas fa-play"></i>
+            </button>
+            <button class="btn" id="stop">
+              <i class="fas fa-ban"></i>
+            </button>
+          </div>
+        </div>
+        <div id="waveform">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <div class="col-sm-0 col-md-2 col-lg-2"></div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
